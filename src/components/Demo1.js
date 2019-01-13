@@ -1,12 +1,13 @@
 /**
  * Created by brady on 2019/1/12.
  */
-import React, { Component } from 'react';
-import './Demo1.css';
-import Demo2 from './Demo2';
+import React, { Component } from 'react'
+import '../Demo1.css'
+import Demo2 from './Demo2'
+import Demo3 from './Demo3'
 
 //对象形式样式
-let styleDiv = {background: '#ff0'};
+let styleDiv = {background: '#ff0'}
 
 /**
  * 组件生命周期：
@@ -21,6 +22,11 @@ class Demo1 extends Component {
     this.names = ['Alice', 'Emily', 'Kate']
     this.username = 'Brady'
     this.age = '32'
+    this.obj = {
+      username: 'Lucy',
+      age: '22',
+      sex: 'female'
+    }
     this.state = {
       sex: 'male',
       count: props.initCount
@@ -51,16 +57,20 @@ class Demo1 extends Component {
     return (
       <div style={styleDiv}>
         {this.state.count}
+        {/* 父子组件传值 */}
         <Demo2 username={this.username} age={this.age} sex={this.state.sex}/>
+        {/* ES6展开运算符使用 */}
+        <Demo3 {...this.obj} />
         <ul style={{fontSize:'16px',color:'#ff4040'}}>
           {
+            /* 数组遍历使用map, key必须有, 用于在状态修改时做为判断的依据 */
             this.names.map((name, index) => {
               return <li className="Demo1-li" key={index}>Hello, {name}</li>
             })
           }
         </ul>
       </div>
-    );
+    )
   }
 
   /**
@@ -90,6 +100,6 @@ class Demo1 extends Component {
 //组件props初始化
 Demo1.defaultProps = {
   initCount: 0
-};
+}
 
 export default Demo1
