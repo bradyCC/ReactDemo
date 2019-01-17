@@ -2,7 +2,7 @@
  * Created by brady on 2019/1/12.
  */
 import React, { Component } from 'react'
-import '../Demo1.css'
+import '../css/Demo1.css'
 import Demo2 from './Demo2'
 import Demo3 from './Demo3'
 
@@ -22,13 +22,13 @@ class Demo1 extends Component {
     this.names = ['Alice', 'Emily', 'Kate']
     this.username = 'Brady'
     this.age = '32'
+    this.sex = 'male'
     this.obj = {
       username: 'Lucy',
       age: '22',
       sex: 'female'
     }
-    this.state = {
-      sex: 'male',
+    this.state = { // 就相当于Vue中的data(){return {}}
       count: props.initCount
     }
   }
@@ -58,9 +58,10 @@ class Demo1 extends Component {
       <div style={styleDiv}>
         {this.state.count}
         {/* 父子组件传值 */}
-        <Demo2 username={this.username} age={this.age} sex={this.state.sex}/>
+        <Demo2 username={this.username} age={this.age} sex={this.sex}/>
         {/* ES6展开运算符使用 */}
         <Demo3 {...this.obj} />
+        {/* 内联样式 */}
         <ul style={{fontSize:'16px',color:'#ff4040'}}>
           {
             /* 数组遍历使用map, key必须有, 用于在状态修改时做为判断的依据 */
