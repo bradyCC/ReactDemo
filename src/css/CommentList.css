@@ -1,0 +1,10 @@
+.List-title {
+  color: red;
+  font-size: 35px;
+  font-weight: 200;
+  text-align: center;
+}
+.List-ul {
+  margin: 0;
+  padding: 0;
+}
