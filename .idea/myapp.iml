@@ -5,11 +5,13 @@
       <excludeFolder url="file://$MODULE_DIR$/.tmp" />
       <excludeFolder url="file://$MODULE_DIR$/node_modules" />
       <excludeFolder url="file://$MODULE_DIR$/node_modules/react-scripts" />
+      <excludeFolder url="file://$MODULE_DIR$/node_modules/webpack" />
       <excludeFolder url="file://$MODULE_DIR$/temp" />
       <excludeFolder url="file://$MODULE_DIR$/tmp" />
     </content>
     <content url="file://$MODULE_DIR$/node_modules" />
     <content url="file://$MODULE_DIR$/node_modules/react-scripts" />
+    <content url="file://$MODULE_DIR$/node_modules/webpack" />
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
   </component>
