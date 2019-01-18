@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ee93b629-c292-4512-89f0-b4a080b9de0f" name="Default Changelist" comment="React Demo">
-      <change afterPath="$PROJECT_DIR$/webpack.config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/myapp.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/myapp.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Demo1.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Demo1.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Demo2.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Demo2.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -23,12 +18,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="294">
-              <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
-              <folding>
-                <element signature="e#0#26#0" expanded="true" />
-                <element signature="e#111#149#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="187">
+              <caret line="14" selection-start-line="14" selection-end-line="14" />
             </state>
           </provider>
         </entry>
@@ -36,11 +27,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/components/Demo1.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="356">
-              <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
-              <folding>
-                <element signature="e#42#83#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="238">
+              <caret line="17" selection-start-line="17" selection-end-line="17" />
             </state>
           </provider>
         </entry>
@@ -81,10 +69,10 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="y" value="23" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-10" />
     <option name="width" value="1920" />
-    <option name="height" value="987" />
+    <option name="height" value="1049" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -97,8 +85,13 @@
         <subPane>
           <expand>
             <path>
-              <item name="ReactDemo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ReactDemo" type="462c0819:PsiDirectoryNode" />
+              <item name="myapp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="myapp" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="myapp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="myapp" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -195,6 +188,8 @@
       <workItem from="1547371644257" duration="491000" />
       <workItem from="1547372184856" duration="217000" />
       <workItem from="1547372529960" duration="8778000" />
+      <workItem from="1547427759756" duration="109000" />
+      <workItem from="1547541960876" duration="41000" />
     </task>
     <task id="LOCAL-00001" summary="React Demo">
       <created>1547381791536</created>
@@ -207,15 +202,14 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="35011000" />
+    <option name="totallyTimeSpent" value="35161000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1920" height="987" extended-state="0" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4808652" visible="true" weight="0.14894737" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.48" visible="true" weight="0.14752372" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="npm" order="2" sideWeight="0.51913476" side_tool="true" weight="0.14894737" />
+      <window_info id="npm" order="2" sideWeight="0.52" side_tool="true" visible="true" weight="0.14752372" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
@@ -226,8 +220,8 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" sideWeight="0.4994737" weight="0.32924107" />
-      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5068421" side_tool="true" visible="true" weight="0.32924107" />
-      <window_info anchor="bottom" id="Terminal" order="10" weight="0.32254463" />
+      <window_info active="true" anchor="bottom" id="Event Log" order="9" sideWeight="0.50105375" side_tool="true" visible="true" weight="0.32212582" />
+      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.49894625" visible="true" weight="0.32212582" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -330,13 +324,7 @@
     <entry file="file://$PROJECT_DIR$/node_modules/react/index.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Demo4.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Demo4.jsx" />
     <entry file="file://$PROJECT_DIR$/src/components/Demo2.jsx">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="168">
@@ -392,29 +380,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/webpack.config.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
+        <state relative-caret-position="153">
           <caret line="9" column="41" selection-start-line="9" selection-start-column="41" selection-end-line="9" selection-end-column="41" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="294">
-          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-            <element signature="e#111#149#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="187">
+          <caret line="14" selection-start-line="14" selection-end-line="14" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/Demo1.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="356">
-          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
-          <folding>
-            <element signature="e#42#83#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="238">
+          <caret line="17" selection-start-line="17" selection-end-line="17" />
         </state>
       </provider>
     </entry>
