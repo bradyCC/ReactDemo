@@ -11,9 +11,9 @@ const AppRouter = () => (
   <HashRouter>
     <Switch>
       <Route exact path="/" component={App} />
-      <Route exact path="/demo1" component={Demo1} />
-      <Route exact path="/demo1/:id" component={Demo1} />
-      <Route exact path="/commentlist" component={CommentList}/>
+      <Route path="/demo1" component={Demo1} />
+      <Route path="/commentlist" component={CommentList} />
+      <Route path="/commentlist/:id" component={CommentList}/>
     </Switch>
   </HashRouter>
 )

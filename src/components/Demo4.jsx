@@ -3,6 +3,9 @@
  */
 
 import React, {Component} from 'react'
+import Fetch from '../util/fetch'
+
+let token = 'a7aa486945bece5c9477e93cdc7168cb'
 
 class Demo4 extends Component {
   constructor(props) {
@@ -14,7 +17,11 @@ class Demo4 extends Component {
 
   render() {
     return (
-      <input type="text" value={this.state.msg} onChange={this.mychangeHandler}/>
+      <div>
+        <input type="text" value={this.state.msg} onChange={this.mychangeHandler} />
+        <input type="button" value="获取数据" onClick={this.mygetdata} />
+        <input type="button" value="获取数据1" onClick={this.mygetdata1} />
+      </div>
     )
   }
 
@@ -25,6 +32,30 @@ class Demo4 extends Component {
     this.setState({
       msg: event.target.value
     })
+  }
+
+  //fetch Ajax交互
+  mygetdata = () => {
+    fetch(
+      `http://test.sumaifu.com/api/mobile/Memberapi/announcementslist?t=${token}`,
+      {
+        method: 'POST'
+        }
+      )
+      .then(res => res.json())
+      .then(data => {
+        console.log(data)
+      })
+      .catch(e => console.log('错误:', e))
+  }
+
+  async mygetdata1 () {
+    let data = await Fetch({
+      url: `Memberapi/announcementsinfo?t=${token}`,
+      method: 'POST',
+      data: {id: '19'}
+    })
+    console.log(data)
   }
 }
 
