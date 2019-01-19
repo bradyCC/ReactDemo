@@ -5,6 +5,7 @@ import React, { Component } from 'react'
 import '../css/Demo1.css'
 import Demo2 from './Demo2'
 import Demo3 from './Demo3'
+import Demo4 from './Demo4'
 
 //对象形式样式
 let styleDiv = {background: '#ff0'}
@@ -56,7 +57,11 @@ class Demo1 extends Component {
   render() {
     return (
       <div style={styleDiv}>
-        {this.state.count}
+        {/* Router路由用法 */}
+        <a href="#/commentlist">评论列表</a>
+        <button onClick={() => this.props.history.push('commentlist')}>评论列表</button>
+        <button onClick={() => this.props.history.go(-1)}>后退</button>
+        <button onClick={() => this.props.history.go(1)}>前进</button>
         {/* 父子组件传值 */}
         <Demo2 username={this.username} age={this.age} sex={this.sex}/>
         {/* ES6展开运算符使用 */}
@@ -70,6 +75,7 @@ class Demo1 extends Component {
             })
           }
         </ul>
+        <Demo4 />
       </div>
     )
   }
@@ -87,6 +93,7 @@ class Demo1 extends Component {
    * */
   componentDidMount() {
     console.log(this.state.count)
+    console.log(this.props.match.params) // 获取路由传参
   }
 
   /**

@@ -5,17 +5,26 @@
 import React, {Component} from 'react';
 
 class Demo3 extends Component {
+  constructor (props) {
+    super(props)
+    this.state = {}
+  }
   render() {
     return (
       <div>
-        <button onClick={this.myclickHandler}>按钮</button>
+        <button onClick={() => this.myclickHandler(this)} onMouseEnter={this.mymouseenterHandler}>按钮</button>
         <p>姓名：{this.props.username}，年龄：{this.props.age}，性别：{this.props.sex}</p>
       </div>
     )
   }
 
-  myclickHandler () {
-    console.log('11111')
+  //鼠标点击事件 onClick
+  myclickHandler (that) {
+    console.log(that)
+  }
+  //鼠标移入事件 onMouseEnter
+  mymouseenterHandler () {
+    console.log('Hello World!')
   }
 }
 

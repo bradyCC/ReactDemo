@@ -6,6 +6,10 @@ import React, {Component} from 'react'
 import '@/css/CommentItem.css'
 
 class CommentItem extends Component {
+  constructor (props) {
+    super(props)
+    this.state = {}
+  }
   render() {
     return (
       <li className="Item-li">
