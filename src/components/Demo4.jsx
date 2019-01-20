@@ -8,13 +8,17 @@ class Demo4 extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      msg: ``
+      msg: ``,
+      message: ''
     }
   }
 
   render() {
     return (
-      <input type="text" value={this.state.msg} onChange={this.mychangeHandler}/>
+      <div>
+        <input type="text" value={this.state.msg} onChange={this.mychangeHandler}/>
+        <input type="text" value={this.state.message} onChange={this.mychangeHandler} ref="message" />
+      </div>
     )
   }
 
@@ -23,7 +27,8 @@ class Demo4 extends Component {
     // console.log(event.target.value)
     //使用 this.setState() 方法修改 this.state.msg 的值
     this.setState({
-      msg: event.target.value
+      msg: event.target.value,
+      message: this.refs.message.value
     }, () => {
       console.log(this.state.msg)
     })
