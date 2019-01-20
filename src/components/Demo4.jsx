@@ -20,10 +20,12 @@ class Demo4 extends Component {
 
   //表单元素修改事件 onChange
   mychangeHandler = event => {
-    console.log(event.target.value)
+    // console.log(event.target.value)
     //使用 this.setState() 方法修改 this.state.msg 的值
     this.setState({
       msg: event.target.value
+    }, () => {
+      console.log(this.state.msg)
     })
   }
 }
