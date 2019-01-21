@@ -1,11 +1,15 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import AppRouter from './Router.js'
+import AppRouter from '@/Router.js'
+import {Provider} from 'react-redux'
+import {createStore} from 'redux'
 import './index.css'
 import * as serviceWorker from './serviceWorker'
 
 ReactDOM.render(
-  <AppRouter />,
+  <Provider>
+    <AppRouter />
+  </Provider>,
   document.getElementById('root')
 )
 
