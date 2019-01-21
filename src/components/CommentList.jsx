@@ -35,6 +35,10 @@ class CommentList extends Component {
       </div>
     )
   }
+  componentDidMount() {
+    console.log(this.props.match.params) // 获取显示(路由)传参
+    console.log(this.props.history.location) //获取隐式传参
+  }
 }
 
 export default CommentList

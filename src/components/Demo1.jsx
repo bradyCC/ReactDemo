@@ -59,9 +59,13 @@ class Demo1 extends Component {
       <div style={styleDiv}>
         {/* Router路由用法 */}
         <a href="#/commentlist">评论列表</a>
-        <button onClick={() => this.props.history.push('commentlist')}>评论列表</button>
+        <button onClick={() => this.props.history.push('commentlist/3')}>显示传参</button>
+        <button onClick={() => this.props.history.push({
+          pathname: '/commentlist', state: {id: 3}
+        })}>隐式传参</button>
         <button onClick={() => this.props.history.go(-1)}>后退</button>
         <button onClick={() => this.props.history.go(1)}>前进</button>
+        <button onClick={() => this.props.history.goBack()}>后退</button>
         {/* 父子组件传值 */}
         <Demo2 username={this.username} age={this.age} sex={this.sex}/>
         {/* ES6展开运算符使用 */}
@@ -93,7 +97,6 @@ class Demo1 extends Component {
    * */
   componentDidMount() {
     console.log(this.state.count)
-    console.log(this.props.match.params) // 获取路由传参
   }
 
   /**
@@ -103,6 +106,7 @@ class Demo1 extends Component {
    * */
   componentWillUnmount() {
   }
+
 }
 
 //组件props初始化
