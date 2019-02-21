@@ -109,7 +109,7 @@ class Demo1 extends Component {
 
 }
 
-//组件props初始化
+//组件props初始化  使用静态属性defaultProps来初始化props
 Demo1.defaultProps = {
   initCount: 0
 }
