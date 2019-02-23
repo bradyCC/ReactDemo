@@ -9,6 +9,7 @@ class Demo extends Component {
   //构造函数
   constructor(props) {
     super(props)
+    this.name = 'Brady'
     this.items = [
       { id: 1, user: 'demo1', content: 'demo1content' },
       { id: 2, user: 'demo2', content: 'demo2content' },
@@ -17,7 +18,8 @@ class Demo extends Component {
       { id: 5, user: 'demo5', content: 'demo5content' }
     ]
     this.state = {
-      count: props.initCount
+      count: props.initCount,
+      msg: `msg`
     }
   }
 
@@ -34,29 +36,61 @@ class Demo extends Component {
   //组件已经挂载到页面中, 可以进行DOM操作, 可以发送请求获取数据, 可以通过setState()修改状态值
   componentDidMount() {
     console.log(`当前count：`, this.state.count)
+    console.log(this.props)
   }
 
   //渲染组件到页面中, 无法获取页面中的DOM对象
   render() {
     return (
-      <div>
-        <DemoComment items = {this.items}></DemoComment>
-        <p>{this.state.count}</p>
-        <input type="button" value="触发点击事件" onClick={this.addCount} />
-        <input type="button" value="箭头函数触发点击事件" onClick={() => this.addCount1()} />
-      </div>
+        <div>
+          <h1>父子组件通信</h1>
+          <input type="button" onClick={this.refreshChild()} value="更新子组件"/>
+          <DemoComment text={this.state.childText || '子组件未更新'} refreshParent={() => this.refreshParent()}></DemoComment>
+          {this.state.parentText || '父组件未更新'}
+
+          {/*<DemoComment items={this.items} name={this.name}></DemoComment>*/}
+          <p>{this.state.count}</p>
+          <input type="button" value="触发点击事件" onClick={this.addCount} />
+          <input type="button" value="箭头函数触发点击事件" onClick={() => this.addCount1()} />
+          <input type="text" value={this.state.msg} onChange={this.changeMsg} />
+        </div>
     )
   }
 
+  //更新子组件
+  refreshChild() {
+    return (e) => {
+      this.setState({
+        childText: "父组件沟通子组件成功",
+      })
+    }
+  }
+
+  //更新父组件
+  refreshParent() {
+    this.setState({
+      parentText: "子组件沟通父组件成功",
+    })
+  }
+
+  //触发点击事件
   addCount = event => {
     this.setState({
       count: event.target.value
     })
   }
 
+  //箭头函数触发点击事件
   addCount1 = () => {
     this.setState({
       count: 123
+    })
+  }
+
+  //实现双向绑定
+  changeMsg = event => {
+    this.setState({
+      msg: event.target.value
     })
   }
 
