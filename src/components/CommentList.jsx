@@ -4,7 +4,7 @@
 
 import React, {Component} from 'react'
 import CommentItem from './CommentItem'
-import '@/css/CommentList.css'
+import '../css/CommentList.css'
 
 class CommentList extends Component {
   constructor (props) {

@@ -3,7 +3,7 @@
  */
 
 import React, {Component} from 'react'
-import Fetch from '@/util/fetch'
+import Fetch from '../util/fetch'
 
 let token = 'a7aa486945bece5c9477e93cdc7168cb'
 

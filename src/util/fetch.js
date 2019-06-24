@@ -1,7 +1,7 @@
 /**
  * Created by brady on 2019/1/19.
  */
-import URL from '@/config/config'
+import URL from '../config/config'
 import fetch from 'cross-fetch'
 
 async function myfetch(options) {

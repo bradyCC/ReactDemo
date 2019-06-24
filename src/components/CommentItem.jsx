@@ -3,7 +3,7 @@
  */
 
 import React, {Component} from 'react'
-import '@/css/CommentItem.css'
+import '../css/CommentItem.css'
 
 class CommentItem extends Component {
   constructor (props) {
